@@ -14,7 +14,11 @@
     "typescript": "~1.8.10",
     "webpack": "~1.13.1",
     "jshint-loader": "~0.8.3",
-    "ts-loader": "~0.8.2"
+    "ts-loader": "~0.8.2",
+    "style-loader": "~0.13.1",
+    "css-loader": "^0.18.0",
+    "node-sass": "~3.8.0",
+    "sass-loader": "~4.0.0"
   },
   "dependencies": {
     "angular": "~1.5.8"

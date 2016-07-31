@@ -13,23 +13,33 @@ module.exports = {
     },
     module: {
         // preLoaders: [
-        // {
-        //     test: /\.js$/,
-        //     exclude: /node_modules/,
-        //     loader: 'jshint-loader'
-        // }
+        //     {
+        //         test: /\.js$/,
+        //         exclude: /node_modules/,
+        //         loader: 'jshint-loader'
+        //     }
         // ],
         loaders: [
             {
                 test: /\.ts$/,
                 exclude: /node_modules/,
                 loader: 'ts-loader'
+            },
+            {
+                test: /\.css$/,
+                loaders: ["style-loader","css-loader"]
+            },
+            {
+                // include: PATHS.style,
+                test: /\.scss$/,
+                loaders: ['style', 'css', 'sass']
             }
         ]
     },
     resolve: {
-        extensions: ['', '.js', '.ts']
-    },
+        extensions: ['', '.js', '.ts', '.css','.scss']
+        // root:'./src'
+    }
 
     // webpack dev server configuration
     // devServer: {
