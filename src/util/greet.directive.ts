@@ -6,7 +6,7 @@ export function greetDirectiveFactory() {
     console.log('greet directive factory');
     return {
         replace:true,
-        template: `<h1>Hello World!</h1>`
+        template: `<span class="greet">Hello World!</span>`
     };
 }
 
