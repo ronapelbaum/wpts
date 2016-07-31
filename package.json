@@ -1,0 +1,22 @@
+{
+  "name": "webpack-TypeScript",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --inline",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "jshint": "~2.9.2",
+    "typescript": "~1.8.10",
+    "webpack": "~1.13.1",
+    "jshint-loader": "~0.8.3",
+    "ts-loader": "~0.8.2"
+  },
+  "dependencies": {
+    "angular": "~1.5.8"
+  }
+}
