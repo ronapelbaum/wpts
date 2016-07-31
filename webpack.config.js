@@ -3,11 +3,13 @@
 
 
 module.exports = {
-    entry: {
-        app: ["./src/app.js"]
-    },
+    entry: [
+        "./src/old_1.js",
+        "./src/app.js"
+    ],
     output: {
-        filename: "dist/ronapp.js"
+        path: './bin',
+        filename: "ronapp.bundle.js"
     },
     module: {
         // preLoaders: [
@@ -20,12 +22,19 @@ module.exports = {
         loaders: [
             {
                 test: /\.ts$/,
+                exclude: /node_modules/,
                 loader: 'ts-loader'
             }
         ]
     },
     resolve: {
         extensions: ['', '.js', '.ts']
-    }
+    },
+
+    // webpack dev server configuration
+    // devServer: {
+    //     contentBase: "./src"
+    // }
+
 
 };
