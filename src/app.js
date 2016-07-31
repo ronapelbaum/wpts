@@ -1,12 +1,20 @@
-var Logger = require('./logger/Logger').Logger;
-var logger = new Logger();
-logger.log('app loaded');
+console.log('-- app.js start');
 
-document.write('welcome to my app 2');
+require('angular');
+require('./util/util.module');
 
-var Car = require('./Car.ts').Car;
-var tmpCar = new Car('blue');
-tmpCar.drive();
+angular.module('app',['util']).directive('app',function(){
+    console.log('app directive factory');
+    return {
+        replace:true,
+        // template:'<greet></greet>'
+        template:'<div>App!<greet></greet></div>'
+    }
+});
+
+angular.bootstrap(document, ["app"], {
+    strictDi: true
+});
 
 
-logger.log('end');
+console.log('-- app.js end');
