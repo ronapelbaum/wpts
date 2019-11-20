@@ -21,6 +21,6 @@
     "sass-loader": "~4.0.0"
   },
   "dependencies": {
-    "angular": "~1.5.8"
+    "angular": "~1.7.9"
   }
 }
